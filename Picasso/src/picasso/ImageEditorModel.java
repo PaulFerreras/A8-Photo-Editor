@@ -28,10 +28,11 @@ public class ImageEditorModel {
 	}
 
 	//PF: Paints a square around the cursor when clicked.
+	//Used by PaintBrushTool
 	//This is done using two for loops (x-axis and y-axis)
 	//and the Set Pixel method in PictureImpl. 
-	//The view is changed due to suspend and resumeObservable;
-	//*I may try to change this so view is an observer of model*
+	//The view is updated due to suspend and resumeObservable;
+	//*I may try to change this updated so it uses observer/observable instead.
 	public void paintAt(int x, int y, Pixel brushColor, int brush_size) {
 		current.suspendObservable();;
 		

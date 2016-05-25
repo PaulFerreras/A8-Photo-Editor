@@ -1,0 +1,6 @@
+package picasso;
+
+public interface ToolChoiceListener {
+
+	void toolChosen(Tool tool_name);
+}

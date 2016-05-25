@@ -39,12 +39,15 @@ public class ToolChooserWidget extends JPanel implements ItemListener {
 		listeners.add(l);
 	}
 
-	//PF: Everytime the item in a JComboBox is changed. This method is run.
+	//PF: Everytime the item in a JComboBox is changed, This method is run.
 	//It gets the name of the tool selected, and calls on the method 
 	//toolChosen in all of it's ToolChoiceListeners (i.e. Controller)
 	//to change the tool.
-	//Still not sure why it's run twice.
-	//Still not sure why the If Statement and the ArrayList<ToolChoiceListeners> is needed.
+	
+	//PF: It gets run twice because JComboBox has to unselect the item that was previously selected.
+	//And then select the item that was chosen.
+	
+	//PF: Still not sure why the If Statement and the ArrayList<ToolChoiceListeners> is needed.
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		if (e.getStateChange() == ItemEvent.SELECTED) { 

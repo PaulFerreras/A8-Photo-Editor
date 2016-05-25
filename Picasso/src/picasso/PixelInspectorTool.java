@@ -5,6 +5,10 @@ import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 
 public class PixelInspectorTool implements Tool {
+	
+	//PF: Gets x and y coordinates
+	//of pixel and its rgb values.
+	//Contains the PixelInspectorUI and the Model.
 
 	private PixelInspectorUI ui;
 	private ImageEditorModel model;
@@ -13,6 +17,8 @@ public class PixelInspectorTool implements Tool {
 		this.model = model;
 		ui = new PixelInspectorUI();
 	}
+	
+	//PF: Calls on Set Info method in PixelInspectorUI when Mouse is pressed
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
