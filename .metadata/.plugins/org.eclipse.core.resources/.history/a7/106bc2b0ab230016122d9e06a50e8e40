@@ -1,0 +1,23 @@
+package picasso;
+
+import java.awt.HeadlessException;
+import java.awt.MenuItem;
+import java.awt.MenuShortcut;
+
+public class OpenMenuItem extends MenuItem {
+
+	public OpenMenuItem() throws HeadlessException {
+		// TODO Auto-generated constructor stub
+	}
+
+	public OpenMenuItem(String arg0) throws HeadlessException {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+
+	public OpenMenuItem(String arg0, MenuShortcut arg1) throws HeadlessException {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
+	}
+
+}

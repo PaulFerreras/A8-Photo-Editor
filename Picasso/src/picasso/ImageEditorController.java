@@ -1,8 +1,17 @@
 package picasso;
 
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
 
 public class ImageEditorController implements ToolChoiceListener, MouseListener, MouseMotionListener {
 
@@ -16,6 +25,7 @@ public class ImageEditorController implements ToolChoiceListener, MouseListener,
 	private Tool current_tool;
 	private PixelInspectorTool inspector_tool;
 	private PaintBrushTool paint_brush_tool;
+//	private MenuBar menu_bar;
 	
 	public ImageEditorController(ImageEditorView view, ImageEditorModel model) {
 		this.view = view;
@@ -48,6 +58,10 @@ public class ImageEditorController implements ToolChoiceListener, MouseListener,
 			view.installToolUI(paint_brush_tool.getUI());
 			current_tool = paint_brush_tool;
 		} 
+	}
+	
+	public void setCurrent(ObservablePicture picture) {
+		model.setCurrent(picture);
 	}
 
 	//PF: All Mouse Events gets delegated to the current tool.

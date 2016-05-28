@@ -23,7 +23,7 @@ public class PictureView extends Canvas implements ROIObserver {
 		if (picture == p) {
 			return;
 		}
-		
+		 
 		//PF: Removes this PictureView as an observer of the previous 
 		//picture, if there is already a picture in this PictureView
 		if (picture != null) {

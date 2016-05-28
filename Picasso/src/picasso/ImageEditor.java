@@ -14,7 +14,7 @@ public class ImageEditor {
 
 		//PF: Sets up Main Frame
 		JFrame main_frame = new JFrame();
-		main_frame.setTitle("Assignment 8 Image Editor");
+		main_frame.setTitle("Picasso");
 		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//PF: Creates Model, View, and Controller

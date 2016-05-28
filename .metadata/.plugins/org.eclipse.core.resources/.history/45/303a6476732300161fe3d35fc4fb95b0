@@ -1,0 +1,49 @@
+package picasso;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFileChooser;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class MenuBar extends JMenuBar implements ActionListener {
+	
+	//PF: Extends JMenuBar
+	//Contains all menus and menu items
+
+	private JMenu file_menu;
+	private JMenuItem open_menu_item;
+	
+	public MenuBar() {
+		//PF: Menus are initialized
+		file_menu = new JMenu("File");
+		
+		//PF: Menu items are initialized
+		open_menu_item = new JMenuItem("Open");
+		
+		//PF: Menu items action commands are set
+		open_menu_item.setActionCommand("Open");
+		
+		//PF: MenuBar is added to each menu item as an ActionListener
+		open_menu_item.addActionListener(this);
+		
+		//PF: Menu items are added to their appropriate Menus
+		file_menu.add(open_menu_item);
+		
+		//PF: Menus are added to menu bar
+		this.add(file_menu);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		switch(e.getActionCommand()) {
+		case ("Open"):
+			final JFileChooser fc = new JFileChooser();
+		break;
+		}
+		
+	}
+
+}
