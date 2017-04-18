@@ -2,8 +2,6 @@ package picasso;
 
 abstract public class AnyPicture implements Picture {
 	
-	//PF: Test
-	
 	abstract public int getWidth();
 	abstract public int getHeight();
 
